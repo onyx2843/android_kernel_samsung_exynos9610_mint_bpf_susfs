@@ -27,9 +27,9 @@ jobs:
 
       - uses: szenius/set-timezone@v1.0
         with:
-          timezoneLinux: "Asia/Manila"
-          timezoneMacos: "Asia/Manila"
-          timezoneWindows: "Philippine Standard Time"
+          timezoneLinux: "Asia/Ho_Chi_Minh"
+          timezoneMacos: "Asia/Ho_Chi_Minh"
+          timezoneWindows: "Indochina Time"
 
       - name: Export build branch
         run: echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
@@ -60,7 +60,7 @@ jobs:
           path: "out/boot.img"
           if-no-files-found: error
 
-      - name: Build Mint kernel (ReSukiSU)
+      - name: Build Mint kernel (KernelSU-Next)
         run: |
           set -eo pipefail
           echo "  I: Building Mint kernel ${GITHUB_REF##*/}-${GITHUB_RUN_NUMBER}"
@@ -69,7 +69,7 @@ jobs:
       - name: Upload kernel image artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ matrix.type }} Kernel Image (ReSukiSU)
+          name: ${{ matrix.type }} Kernel Image (KernelSU-Next)
           path: "out/boot.img"
           if-no-files-found: error
 
@@ -111,9 +111,9 @@ jobs:
 
       - uses: szenius/set-timezone@v1.0
         with:
-          timezoneLinux: "Asia/Manila"
-          timezoneMacos: "Asia/Manila"
-          timezoneWindows: "Philippine Standard Time"
+          timezoneLinux: "Asia/Ho_Chi_Minh"
+          timezoneMacos: "Asia/Ho_Chi_Minh"
+          timezoneWindows: "Indochina Time"
 
       - name: Merge releases
         run: |
