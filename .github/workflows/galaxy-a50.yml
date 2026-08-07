@@ -27,9 +27,9 @@ jobs:
 
       - uses: szenius/set-timezone@v1.0
         with:
-          timezoneLinux: "Asia/Manila"
-          timezoneMacos: "Asia/Manila"
-          timezoneWindows: "Philippine Standard Time"
+          timezoneLinux: "Asia/Ho_Chi_Minh"
+          timezoneMacos: "Asia/Ho_Chi_Minh"
+          timezoneWindows: "Indochina Time"
 
       - name: Export build branch
         run: echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
@@ -111,9 +111,9 @@ jobs:
 
       - uses: szenius/set-timezone@v1.0
         with:
-          timezoneLinux: "Asia/Manila"
-          timezoneMacos: "Asia/Manila"
-          timezoneWindows: "Philippine Standard Time"
+          timezoneLinux: "Asia/Ho_Chi_Minh"
+          timezoneMacos: "Asia/Ho_Chi_Minh"
+          timezoneWindows: "Indochina Time"
 
       - name: Merge releases
         run: |
